@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: gray;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            gap: 30px;
+            grid-template-areas: "h h h h sr"
+                                 "sl c c c sr "
+                                 "sl c c c sr "
+                                 "sl f f f f" ;
+            >div{
+                border: 2px solid blue;
+                &:nth-of-type(1){
+                    grid-area: h;
+                }
+                &:nth-of-type(2){
+                    grid-area: sl;
+                }
+                &:nth-of-type(3){
+                    grid-area: c;
+                }
+                &:nth-of-type(4){
+                    grid-area: sr;
+                }
+                &:nth-of-type(5){
+                    grid-area: f;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+
+</body>
+
+</html>

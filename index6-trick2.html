@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: gray;
+        }
+        section{
+            width: 60%;
+            height: 300px;
+            /* border: 2px solid red; */
+            margin: 100px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,1fr);
+            gap: 15px;
+            >div{
+                border: 2px solid blue;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 50px;
+                &:nth-of-type(2){
+                    grid-column: 2 / span 2;
+                    grid-row: 1 / span 2;
+                }
+                &:nth-of-type(6){
+                    grid-column: 4 / span 2;
+                }
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </section>
+
+</body>
+
+</html>
